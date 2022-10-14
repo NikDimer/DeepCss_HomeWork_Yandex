@@ -13,7 +13,7 @@
             <img class='logo-image' src="img/logo.svg">
             <div class="search">
                 <input class="search_input" placeholder="Найдётся всё">
-                <button class="search_button">Найти</button>
+                <button class="search_button" onclick="window.location = 'https://yandex.ru/search/?text=' + document.getElementsByClassName('search_input')[0].value;">Найти</button>
             </div>
 
             <sector class="error-block">
@@ -96,4 +96,11 @@
             <a href="" class="footer-link footer-link__yandex">Яндекс</a>
         </footer>
     </body>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.keyCode === 13 && document.getElementsByClassName('search_input')[0].value != '') {
+                window.location = 'https://yandex.ru/search/?text=' + document.getElementsByClassName('search_input')[0].value;
+            }
+        });
+    </script>
 </html>

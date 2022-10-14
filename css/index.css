@@ -20,12 +20,8 @@ a {
     transition: all .15s ease-out;
 }
 
-a, a:visited {
-    color: #0054b9;
-}
-
 a:hover {
-    color: red;
+    color: red !important;
 }
 
 * {
@@ -120,6 +116,10 @@ a:hover {
     font-size: 16px;
 }
 
+.error-link, .error-link:visited {
+    color: #0054b9;
+}
+
 /* ServicesBlock */
 .services-block {
     grid-column: 2 / 3;
@@ -144,12 +144,12 @@ a:hover {
     margin-right: 10px;
 }
 
-.services-block_link__black-link {
-    color: black !important;
+.services-block_link, .services-block_link:visited {
+    color: #0054b9;
 }
 
-.services-block_link__black-link:hover {
-    color: red !important;
+.services-block_link__black-link, .services-block_link__black-link:visited {
+    color: black;
 }
 
 /* Footer */
@@ -167,10 +167,6 @@ a:hover {
 .footer-link {
     color: #9C9E9C !important;
     font-size: 13px;
-}
-
-.footer-link:hover {
-    color: red !important;
 }
 
 .footer-link__yandex::before {
