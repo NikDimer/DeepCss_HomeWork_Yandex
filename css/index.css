@@ -1,0 +1,179 @@
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all .15s ease-out;
+}
+
+a, a:visited {
+    color: #0054b9;
+}
+
+a:hover {
+    color: red;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+/*
+    CodeNavigation
+
+    1. Main
+    2. Logo&Search
+    3. ErrorBlock
+    4. ServicesBlock
+    5. Footer
+
+    Use Ctrl+F for navigate
+*/
+
+/* Main */
+.main {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    gap: 18px;
+}
+
+/* Logo&Search */
+.logo-image {
+    grid-column: 1 / 2;
+}
+
+.search {
+    grid-column: 2 / 3;
+
+    height: 44px;
+
+    display: grid;
+    grid-template-columns: 675px 90px;
+    background-color: #fc0;
+    border-radius: 10px;
+
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.search_input, .search_button {
+    outline: none;
+    border: none;
+}
+
+.search_input::placeholder {
+    color: #999999;
+}
+
+.search_input:focus::placeholder {
+    color: transparent;
+}
+
+.search_input {
+    padding-left: 12px;
+
+    font-size: 18px;
+    border: #FFC93D solid 2px;
+    border-radius: 10px;
+}
+
+.search_button {
+    background-color: #FFC93D;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    text-align: center;
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+/* ErrorBlock */
+
+.error-block {
+    grid-column: 2 / 3;
+}
+
+.error-block_title {
+    font-size: 30px;
+    font-weight: normal;
+
+    margin: 0;
+}
+
+.error-block_description {
+    font-size: 16px;
+}
+
+/* ServicesBlock */
+.services-block {
+    grid-column: 2 / 3;
+
+    display: flex;
+    gap: 122px;
+}
+
+.services-block_list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-block_item {
+    margin-bottom: 15px;
+}
+
+.services-block_item_logo {
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+}
+
+.services-block_link__black-link {
+    color: black !important;
+}
+
+.services-block_link__black-link:hover {
+    color: red !important;
+}
+
+/* Footer */
+.main-footer {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: calc((100% - 883px) / 2);
+    top: calc(100% - 42px);
+
+    width: 883px;
+    justify-self: self-end;
+}
+
+.footer-link {
+    color: #9C9E9C !important;
+    font-size: 13px;
+}
+
+.footer-link:hover {
+    color: red !important;
+}
+
+.footer-link__yandex::before {
+    color: #9C9E9C;
+    content: '© ';
+}
