@@ -43,7 +43,7 @@ a:hover {
 /* Main */
 .main {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 767px;
 
     gap: 18px;
 }
